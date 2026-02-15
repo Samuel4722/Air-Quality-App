@@ -7,7 +7,7 @@ Projekt zawiera testy jednostkowe, integracyjne i E2E oraz prosty system cache w
 
 ---
 
-## 🚀 Funkcjonalność
+## Funkcjonalność
 
 ### Endpoint
 
@@ -30,8 +30,7 @@ Kod
   "source": "OpenWeather"
 }
 
-📁 Struktura projektu
-Kod
+##  Struktura projektu
 
 app/
 ├── core/
@@ -60,7 +59,7 @@ Dockerfile
 docker-compose.yml
 start.py
 
-📦 Wymagania
+ Wymagania
 
     Python 3.12+
 
@@ -92,7 +91,7 @@ Kod
 
 .env.example
 
-▶️ Uruchamianie aplikacji lokalnie
+ Uruchamianie aplikacji lokalnie
 1. Instalacja zależności
 Kod
 
@@ -113,7 +112,7 @@ Kod
 
 http://127.0.0.1:8000/docs
 
-🐳 Uruchamianie aplikacji w Dockerze
+ Uruchamianie aplikacji w Dockerze
 
 Aplikacja korzysta ze zmiennych środowiskowych z pliku .env.
 Uruchomienie jednym poleceniem:
@@ -127,7 +126,7 @@ Dostęp:
 
     Swagger: http://localhost:8000/docs
 
-🧪 Testy
+ Testy
 Uruchomienie wszystkich testów:
 Kod
 
@@ -143,25 +142,23 @@ Kod
 
 docs/
 
-🧠 Logika wyboru źródła danych
+ Logika wyboru źródła danych
 Kod
-
-             +----------------------+
-             |  /air-quality/{city} |
-             +----------+-----------+
-                        |
-                        v
-         +--------------+--------------+
-         | Wykryj kraj miasta (OWM)    |
-         +--------------+--------------+
-                        |
-       +----------------+----------------+
-       |                                 |
-       v                                 v
-  Jeśli kraj == "PL"              Jeśli kraj != "PL"
-     użyj Airly API               użyj OpenWeather API
-
-🗃️ Cache
++----------------------+
+|  /air-quality/{city} |
++----------+-----------+
+|
+v
++--------------+--------------+
+| Wykryj kraj miasta (OWM)    |
++--------------+--------------+
+|
++----------------+----------------+
+|                                 |
+v                                 v
+Jeśli kraj == "PL"              Jeśli kraj != "PL"
+użyj Airly API               użyj OpenWeather API
+ Cache
 
     Implementacja w pamięci (dict)
 
@@ -171,10 +168,10 @@ Kod
 
     Wykorzystywany w air_quality_service.py
 
-🎯 Cel projektu
+Cel projektu
 
 Projekt został wykonany jako aplikacja zaliczeniowa na studia i może być wykorzystywany jako projekt portfolio.
-📄 Licencja
+ Licencja
 
 Projekt edukacyjny — możesz go rozwijać, modyfikować i wykorzystywać w portfolio.
 Kod
