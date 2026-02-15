@@ -7,9 +7,10 @@ Projekt zawiera testy jednostkowe, integracyjne i E2E oraz prosty system cache w
 
 ---
 
-## Funkcjonalność
+## 🚀 Funkcjonalność
 
 ### Endpoint
+
 
 GET /air-quality/{city}
 Kod
@@ -22,16 +23,12 @@ Kod
 3. W przeciwnym przypadku dane pobierane są z **OpenWeather Air Pollution API**.  
 4. Wynik jest zapisywany w cache na **5 minut (TTL = 300s)**.  
 5. Zwracany jest JSON:
-
-```json
 {
   "city": "Tokyo",
   "pm25": 20.5,
   "source": "OpenWeather"
 }
-
-##  Struktura projektu
-
+Struktura projektu
 app/
 ├── core/
 │   └── config.py
@@ -59,26 +56,24 @@ Dockerfile
 docker-compose.yml
 start.py
 
+
  Wymagania
+Python 3.12+
 
-    Python 3.12+
+FastAPI
 
-    FastAPI
+requests
 
-    requests
+python-dotenv
 
-    python-dotenv
+pytest + pytest-cov
 
-    pytest + pytest-cov
-
-    Docker (opcjonalnie)
+Docker (opcjonalnie)
 
 Wszystkie zależności znajdują się w:
-Kod
-
 requirements.txt
 
-🔧 Konfiguracja środowiska
+ Konfiguracja środowiska
 
 Utwórz plik .env w katalogu głównym projektu:
 Kod
@@ -93,22 +88,18 @@ Kod
 
  Uruchamianie aplikacji lokalnie
 1. Instalacja zależności
-Kod
 
 pip install -r requirements.txt
 
 2. Uruchomienie serwera
-Kod
 
 uvicorn app.main:app --reload
 
 Aplikacja dostępna pod adresem:
-Kod
 
 http://127.0.0.1:8000
 
 Dokumentacja API:
-Kod
 
 http://127.0.0.1:8000/docs
 
@@ -116,34 +107,29 @@ http://127.0.0.1:8000/docs
 
 Aplikacja korzysta ze zmiennych środowiskowych z pliku .env.
 Uruchomienie jednym poleceniem:
-Kod
 
 docker compose up --build
 
 Dostęp:
 
-    Aplikacja: http://localhost:8000
+  Aplikacja: http://localhost:8000
 
-    Swagger: http://localhost:8000/docs
+  Swagger: http://localhost:8000/docs
 
- Testy
+Testy
 Uruchomienie wszystkich testów:
-Kod
 
 pytest
 
 Testy z pokryciem:
-Kod
 
 pytest --cov=app
 
 Raporty znajdują się w:
-Kod
 
 docs/
 
  Logika wyboru źródła danych
-Kod
 +----------------------+
 |  /air-quality/{city} |
 +----------+-----------+
@@ -158,15 +144,16 @@ v
 v                                 v
 Jeśli kraj == "PL"              Jeśli kraj != "PL"
 użyj Airly API               użyj OpenWeather API
+ 
  Cache
 
-    Implementacja w pamięci (dict)
+  Implementacja w pamięci (dict)
 
-    Klucz: aqi:{city}
+  Klucz: aqi:{city}
 
-    TTL: 300 sekund
+  TTL: 300 sekund
 
-    Wykorzystywany w air_quality_service.py
+  Wykorzystywany w air_quality_service.py
 
 Cel projektu
 
@@ -174,4 +161,4 @@ Projekt został wykonany jako aplikacja zaliczeniowa na studia i może być wyko
  Licencja
 
 Projekt edukacyjny — możesz go rozwijać, modyfikować i wykorzystywać w portfolio.
-Kod
+
