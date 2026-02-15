@@ -1,0 +1,19 @@
+================================ PRZYKLADOWY RAPORT Z TESTÓW APLIKACJI ================================ 
+
+Polecenie:
+    pytest -q
+
+Wynik:
+    16 passed in 3.33s
+
+Opis:
+    Wszystkie testy jednostkowe, integracyjne oraz E2E zakończyły się sukcesem.
+    Testy E2E zostały oznaczone markerem @pytest.mark.e2e oraz pomijane, jeśli brakuje kluczy API (Airly lub OpenWeather).
+
+Struktura testów:
+    - tests/unit/           → testy jednostkowe
+    - tests/integration/    → testy integracyjne
+    - tests/e2e/            → testy end-to-end
+
+Brak błędów, brak nieprzechodzących scenariuszy.
+

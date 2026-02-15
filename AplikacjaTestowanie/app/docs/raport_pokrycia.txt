@@ -1,0 +1,43 @@
+================================ PRZYKLADOWY RAPORT POKRYCIA ================================ 
+
+Polecenie:
+    pytest --cov=app --cov-report=term-missing
+
+Wynik :
+
+================================ test session starts ================================
+
+tests/e2e/test_air_quality_e2e.py .                                           [  6%]
+tests/e2e/test_airly_e2e.py .                                                 [ 12%]
+tests/integration/test_air_quality_integration.py .                           [ 18%]
+tests/integration/test_airly_country_integration.py .                         [ 25%]
+tests/integration/test_cache_integration.py .                                 [ 31%]
+tests/integration/test_errors_integration.py ..                               [ 43%]
+tests/unit/test_airly_country_unit.py .                                       [ 50%]
+tests/unit/test_airly_errors_unit.py .                                        [ 56%]
+tests/unit/test_airly_unit.py .                                               [ 62%]
+tests/unit/test_cache_unit.py ..                                              [ 75%]
+tests/unit/test_country_detection.py ..                                       [ 87%]
+tests/unit/test_openweather_unit.py ..                                        [100%]
+
+================================== tests coverage ===================================
+__________________ coverage: platform linux, python 3.12.3-final-0 __________________
+
+Name                                  Stmts   Miss  Cover   Missing
+-------------------------------------------------------------------
+app/__init__.py                           0      0   100%
+app/main.py                               4      0   100%
+app/routers/__init__.py                   0      0   100%
+app/routers/air_quality.py                9      0   100%
+app/services/__init__.py                  0      0   100%
+app/services/air_quality_service.py      32      0   100%
+app/services/airly_service.py            41      4    90%   11, 58-59, 76
+app/services/cache.py                    12      0   100%
+app/services/openweather_service.py      28      3    89%   10, 37-38
+-------------------------------------------------------------------
+TOTAL                                   126      7    94%
+
+Opis:
+    Pokrycie kodu wynosi ~94%, co spełnia wymagania projektu.
+    Brak nieprzetestowanych krytycznych ścieżek.
+

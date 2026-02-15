@@ -1,0 +1,10 @@
+fastapi 
+uvicorn 
+sqlalchemy 
+requests 
+pydantic
+pytest
+pytest-cov
+httpx
+python-dotenv
+
