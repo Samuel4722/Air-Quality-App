@@ -79,9 +79,6 @@ Utwórz plik `.env` w katalogu głównym projektu:
 OPENWEATHER_API_KEY=twoj_klucz  
 AIRLY_API_KEY=twoj_klucz  
 
-Do repozytorium dodawany jest tylko:  
-.env.example
-
 ---
 
 ##  Uruchamianie aplikacji lokalnie
