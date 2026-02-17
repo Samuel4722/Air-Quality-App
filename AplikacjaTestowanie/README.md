@@ -162,7 +162,7 @@ użyj Airly API               użyj OpenWeather API
 
 ##  Cel projektu
 
-Projekt został wykonany jako aplikacja zaliczeniowa na studia i może być wykorzystywany jako projekt portfolio.
+Projekt został wykonany jako aplikacja zaliczeniowa na studia.
 
 ---
 
